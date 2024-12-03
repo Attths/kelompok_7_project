@@ -5,7 +5,7 @@
 <div class="form_input">
     <form method="post" action="/zakat-emas">
         <label for="harga_emas_per_gram">Harga Emas per Gram Saat Ini</label>
-        <p>Rp {{ harga_emas_per_gram }}</p>
+        <p>Rp{{ harga_emas_per_gram }}</p>
         <br>
         <label for="jumlah_emas">Nilai Emas</label>
         <input type="number" id="jumlah_emas" name="jumlah_emas" min="0" required placeholder="Input nilai emas anda dalam rupiah...">
@@ -16,10 +16,11 @@
 {% if nilai_zakat is not none %}
 <div class="hasil_zakat">
     <h2>Hasil Perhitungan</h2>
-    <p>Nisab (85 gram): Rp {{ nisab }}</p>
+    <p>Nisab (85 gram): Rp{{ nisab }}</p>
+    <br>
     {% if wajib_zakat %}
         <p class="zakat_yes"><strong>Anda wajib membayar zakat!</strong></p>
-        <p>Nilai Zakat yang harus dibayar: <strong>Rp {{ nilai_zakat }}</strong></p>
+        <p>Nilai Zakat yang harus dibayar: <strong>Rp{{ nilai_zakat }}</strong></p>
     {% else %}
         <p class="zakat_no"><strong>Anda tidak wajib membayar zakat.</strong></p>
     {% endif %}

@@ -9,7 +9,7 @@
 <body>
     <nav>
         <div class="logo">
-            <h1>Kalkulator Zakat</h1>
+            <h1><a href="{{url_for ('home')}}">Kelompok 7</a></h1>
         </div>
         <div class="option">
             <ul class="nav_option">
@@ -23,7 +23,7 @@
         <div class="sidebar">
             <p class="sidebar_title">Pilih Jenis Zakat</p>
             <ul class="list_zakat">
-                <li><a href="{{url_for ('zakat_emas')}}">Emas dan Perak</a></li>
+                <li><a href="{{url_for ('zakat_emas')}}">Emas</a></li>
                 <li><a href="{{url_for ('zakat_perdagangan')}}">Perdagangan</a></li>
                 <li><a href="{{url_for ('zakat_pertanian')}}">Pertanian</a></li>
                 <li><a href="{{url_for ('zakat_penghasilan')}}">Penghasilan</a></li>
@@ -36,6 +36,5 @@
             {% endblock %}
         </div>
     </div>
-
 </body>
 </html>

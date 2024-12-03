@@ -1,16 +1,12 @@
 {% extends "base.html" %}
 
-{% block style %}
-<link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename='css/zakat-perdagangan.css')}}">
-{% endblock %}
-
 {% block content %}
 
-<h1 class="title_zakat">Zakat Perdagangan</h1>
+<h1 class="title_zakat">Zakat Pertanian</h1>
 <div class="form_input">
     <form method="post" action="/zakat-pertanian">
         <label for="harga_per_kg">Harga Jual per Kg Saat Ini</label>
-        <p>Rp {{ harga_per_kg if harga_per_kg is not none else 0 }}</p>
+        <p>Rp{{ harga_per_kg if harga_per_kg is not none else 0 }}</p>
 
         <br>
 
@@ -37,8 +33,10 @@
     <h2>Hasil Perhitungan</h2>
     <p>Nisab (635 Kg)</p>
     {% if wajib_zakat %}
+    <br>
         <p class="zakat_yes"><strong>Anda wajib membayar zakat!</strong></p>
-        <p>Nilai Zakat yang harus dibayar: <strong>Rp {{ nilai_zakat }}</strong></p>
+        <p>Nilai Zakat yang harus dibayar (Rp):<strong>Rp {{ nilai_zakat }}</strong></p>
+        <p>Nilai Zakat yang harus dibayar (Kg): <strong>{{ nilai_zakat_kg }}Kg</strong></p>
     {% else %}
         <p class="zakat_no"><strong>Anda tidak wajib membayar zakat.</strong></p>
     {% endif %}
@@ -50,7 +48,8 @@
     <b>Nisab dan Cara Menghitung Zakat Pertanian</b> <br>
     Zakat pertanian wajib dikenakan jika hasil panen mencapai nisab 635 kg gabah. Besarnya kadar zakat adalah:<br>
     - 5% untuk lahan dengan irigasi<br>
-    - 10% untuk lahan tanpa irigasi (mengandalkan air hujan).<br><br>
+    - 10% untuk lahan tanpa irigasi (mengandalkan air hujan).
+    <br><br>
     Sumber: basnas.go.id
   </p>
 </div>

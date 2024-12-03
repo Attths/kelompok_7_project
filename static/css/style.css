@@ -12,11 +12,13 @@ nav {
     justify-content: space-between;
 }
 
-.logo {
-    font-size: 20px;
+.logo a{
+    text-decoration: none;
+    font-size: 30px;
     color: white;
     margin-left: 30px;
 }
+
 
 .nav_option{
     display: flex;
@@ -47,10 +49,10 @@ nav {
 
 .content {
     display: flex;
-    min-height: 150%;
 }
 
 .sidebar{
+    min-height: 100vh;
     flex: 1;
     background-color: rgb(246, 246, 246);
     background-size: auto;
@@ -73,7 +75,11 @@ nav {
 }
 
 .list_zakat a:hover {
+    transition: 0.2s;
+    color: #59c75c;
     text-decoration: underline;
+    font-weight: 700;
+    margin: 10px;
 }
 
 .menu_kal {
@@ -82,8 +88,12 @@ nav {
 }
 
 .title_zakat {
+    font-family: 'Nunito', sans-serif;
+    font-size: 45px;
+    color: #4CAF50;
     margin: 40px 0 0 50px;
 }
+
 
 .form_input form {
     display: flex;
@@ -92,7 +102,7 @@ nav {
 }
 
 input[type=number] {
-    width: 50%;
+    width: 45%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -108,7 +118,25 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    box-shadow: 2px 2px 4px 1px rgb(143, 143, 143);
   }
+  
+button:hover{
+    background: linear-gradient(135deg, #84ec88 0%, #5ddb61 25%, #3dab40 50%, #59c75c 75%, #84ec88 100%);
+    animation: animate 10s linear infinite;
+    background-size: 400%;
+}
+
+@keyframes animate {
+    100% {
+        background-position: 400%;
+    }
+
+    100% {
+        background-position: 400%;
+    }
+    
+}
 
 .hasil_zakat {
     margin: 20px 0 0 50px;
@@ -127,3 +155,27 @@ button {
     border-radius: 3px;
     padding : 10px 30px 10px 30px;
     }
+
+.desc_about {
+    width: 75%;
+    margin: 0 0 0 50px;
+}
+
+.desc_home {
+    width: 75%;
+    margin: 0 0 0 50px;
+}
+
+p span {
+    font-weight: 800;
+ color: #4CAF50;
+}
+
+footer {
+    color: white;
+    background-color: #d3f0d4;
+    border-width: 50p;
+    border-top: #4CAF50;
+    display: flex;
+    justify-content: center;
+}

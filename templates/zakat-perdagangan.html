@@ -10,7 +10,7 @@
 <div class="form_input">
     <form method="post" action="/zakat-perdagangan">
         <label for="harga_emas_per_gram">Harga Emas per Gram Saat Ini</label>
-        <p>Rp {{ harga_emas_per_gram }}</p>
+        <p>Rp{{ harga_emas_per_gram }}</p>
         <br>
 
         <label for="jumlah_emas">Nilai Modal</label>
@@ -36,6 +36,7 @@
 <div class="hasil_zakat">
     <h2>Hasil Perhitungan</h2>
     <p>Nisab (85 gram): Rp {{ nisab }}</p>
+    <br>
     {% if wajib_zakat %}
         <p class="zakat_yes"><strong>Anda wajib membayar zakat!</strong></p>
         <p>Nilai Zakat yang harus dibayar: <strong>Rp {{ nilai_zakat }}</strong></p>
@@ -47,13 +48,13 @@
 
 <div class="desc_zakat">
   <p name="desc_zakat">
-      <b>Nisab dan Cara Menghitung Zakat Emas</b> <br>
-      Zakat emas wajib dikenakan zakat jika emas yang tersimpan telah mencapai atau melebihi nisabnya yakni 85 gram (mengikuti harga Buy Back emas pada hari dimana zakat akan ditunaikan), 
-      kadar zakat emas adalah 2,5%.<br><br>
-      Berikut cara menghitung zakat emas/perak:<br>
-      2,5% x Jumlah emas yang tersimpan selama 1 tahun <br><br>
-
-      Sumber: basnas.go.id
+      <b>Nisab dan Cara Menghitung Zakat Perdagangan</b> <br>
+      Zakat perrniagaan disebut juga dengan Zakat Tijarah, adalah zakat yang dikeluarkan atas kepemilikan 
+      harta yang diperuntukkan untuk kegiatan jual-beli. Syarat yang harus dipenuhi untuk mengeluarkan zakat perniagaan, adalah: <br> <br>
+      Usaha telah berjalan selama setahun, dan laba bersih dari kegiatan perniagaan tersebut ditaksir telah mencapai zakat 
+      85 gram Emas atau 91,92 gram Emas (dalam setahun), maka wajib membayarkan zakat sebesar 2,5%.
+      <br><br>
+      Sumber: ziswafctarsa.id
   </p>
 </div>
 
