@@ -5,8 +5,9 @@
 <h1 class="title_zakat">Zakat Pertanian</h1>
 <div class="form_input">
     <form method="post" action="/zakat-pertanian">
-        <label for="harga_per_kg">Harga Jual per Kg Saat Ini</label>
-        <p>Rp{{ harga_per_kg if harga_per_kg is not none else 0 }}</p>
+        <!-- <label for="harga_per_kg">Harga Jual per Kg Saat Ini</label> -->
+        <p>Harga Jual per Kg Saat Ini: Rp{{ harga_per_kg if harga_per_kg is not none else 0 }}</p>
+        <p>Nisab (635 Kg)</p>
 
         <br>
 
@@ -24,18 +25,18 @@
 
         <br>
 
-        <button type="submit">Hitung zakat Anda</button>
+        <button type="submit">Hitung Zakat</button>
     </form>
 </div>
 
 {% if nilai_zakat is not none %}
 <div class="hasil_zakat">
     <h2>Hasil Perhitungan</h2>
-    <p>Nisab (635 Kg)</p>
+    
     {% if wajib_zakat %}
     <br>
         <p class="zakat_yes"><strong>Anda wajib membayar zakat!</strong></p>
-        <p>Nilai Zakat yang harus dibayar (Rp):<strong>Rp {{ nilai_zakat }}</strong></p>
+        <p>Nilai Zakat yang harus dibayar (Rp): <strong>Rp {{ nilai_zakat }}</strong></p>
         <p>Nilai Zakat yang harus dibayar (Kg): <strong>{{ nilai_zakat_kg }}Kg</strong></p>
     {% else %}
         <p class="zakat_no"><strong>Anda tidak wajib membayar zakat.</strong></p>

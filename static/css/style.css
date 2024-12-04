@@ -1,32 +1,33 @@
 *, body {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 nav {
     height: 80px;
-    background-color: #4CAF50;
     display: flex;
     align-items: center;
+    background-image: linear-gradient(45deg, #63b665, #7cc476, #93d387, #58a83b);
     justify-content: space-between;
+    box-shadow: 0px 14px 18px -16px rgba(0,0,0,0.45);
 }
 
 .logo a{
-    text-decoration: none;
     font-size: 30px;
-    color: white;
     margin-left: 30px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
 }
 
 
 .nav_option{
     display: flex;
-    font-size: 20px;
+    font-size: 22px;
     margin-right: 30px;
+    text-decoration: none;
     list-style-type: none;
     justify-content: flex-end;
-    text-decoration: none;
 }
 
 .home{
@@ -34,17 +35,19 @@ nav {
 }
 
 .nav_option a{
+    font-size: 18px;
+    font-weight: 550;
     color: white;
     text-decoration: none;
 }
 
 .nav_option a:hover {
+    transition: 0.3s;
+    border-radius: 30px;
+    text-decoration: none;
     background-color: white;
     color: rgb(55, 191, 105);
-    padding: 5px 10px 5px 10px;
-    text-decoration: none;
-    border-radius: 30px;
-    transition: 0.3s;
+    padding: 5px 20px 5px 20px;
 }
 
 .content {
@@ -52,82 +55,93 @@ nav {
 }
 
 .sidebar{
+    box-shadow: 0px 3px 15px -10px rgba(0,0,0,0.45);
+    border-right: 1px solid rgb(146, 146, 146);
     min-height: 100vh;
     flex: 1;
-    background-color: rgb(246, 246, 246);
     background-size: auto;
 }
 
 .sidebar_title {
+    color: #4CAF50;
     font-size: 20px;
     font-weight: 600;
-    margin: 40px 0 0 50px;
+    margin: 50px 0 0 45px;
 }
 
 .list_zakat {
     list-style-type: none;
-    margin: 20px 0 0 80px;
+    margin: 5px 0 0 70px;
 }
 
 .list_zakat a {
+    font-size: 16px;
     text-decoration: none;
     color: black;
 }
 
 .list_zakat a:hover {
     transition: 0.2s;
-    color: #59c75c;
+    color: #4CAF50;
     text-decoration: underline;
-    font-weight: 700;
-    margin: 10px;
+    font-weight: 800;
+    margin: 15px;
 }
 
 .menu_kal {
-    flex: 4;
+    flex: 5;
     padding: 0 0 40px 0;
 }
 
 .title_zakat {
-    font-family: 'Nunito', sans-serif;
     font-size: 45px;
     color: #4CAF50;
     margin: 40px 0 0 50px;
 }
 
-
 .form_input form {
     display: flex;
     flex-direction: column;
-    margin: 20px 0 0 50px;
+    margin: 5px 0 0 50px;
 }
 
 input[type=number] {
+    border: none;
+    border-radius: 10px;
+    border: 2.5px solid rgb(219, 219, 219);
+    background-color: #ffffff;
     width: 45%;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin: 10px 0;
     box-sizing: border-box;
+    box-shadow: 0px 3px 15px -10px rgba(0,0,0,0.45);
 }
 
 button {
-    width: 15%;
-    font-size: 15px;
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 15px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
+    width: 13%;
     cursor: pointer;
-    box-shadow: 2px 2px 4px 1px rgb(143, 143, 143);
-  }
+    background-color: #ffffff;
+    border: 3px solid #87C374;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 00;
+    color: #87C374;
+    padding: 10px 15px;
+    margin: 15px 0 15px 0;
+    box-shadow: 0px 10px 15px -10px rgba(0,0,0,0.45);
+    
+}
   
 button:hover{
-    background: linear-gradient(135deg, #84ec88 0%, #5ddb61 25%, #3dab40 50%, #59c75c 75%, #84ec88 100%);
-    animation: animate 10s linear infinite;
+    color: white;
+    background-color: #87C374;
     background-size: 400%;
+    transition: 0.5s;
+    box-shadow: 0px 10px 15px -10px rgba(0,0,0,0.45);
+    /* animation: animate 10s linear infinite; */
 }
 
-@keyframes animate {
+/* @keyframes animate {
     100% {
         background-position: 400%;
     }
@@ -136,24 +150,37 @@ button:hover{
         background-position: 400%;
     }
     
-}
+} */
 
 .hasil_zakat {
+    color: white;
+    border-radius: 20px;
     margin: 20px 0 0 50px;
-    padding: 20px;
-    background-color: #d3f0d4;
+    padding: 30px;
+    background-color: #489D4A;
     width: 50%;
+    box-shadow: 5px 10px 15px -10px rgba(0,0,0,0.45);
 }
 
 .desc_zakat {
+    border: 2px solid rgb(212, 212, 212);
+    border-radius: 20px;
+    background-color: rgb(252, 252, 252);
+    box-shadow: 5px 10px 15px -10px rgba(0,0,0,0.45);
     width: 70%;
     margin: 20px 0 0 50px;
 }
 
+.desc_zakat p {
+    padding: 20px 20px 20px 20px;
+}
+
 #sistem_pengairan {
-    width: 15%;
-    border-radius: 3px;
+    width: 13%;
+    border-radius: 10px;
     padding : 10px 30px 10px 30px;
+    border: 2.5px solid rgb(219, 219, 219);
+    box-shadow: 3px 3px 15px -10px rgba(0,0,0,0.45);
     }
 
 .desc_about {
@@ -169,13 +196,4 @@ button:hover{
 p span {
     font-weight: 800;
  color: #4CAF50;
-}
-
-footer {
-    color: white;
-    background-color: #d3f0d4;
-    border-width: 50p;
-    border-top: #4CAF50;
-    display: flex;
-    justify-content: center;
 }
