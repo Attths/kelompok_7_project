@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator Zakat</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename='css/style.css')}}">
-    
+    <link rel="icon" type="image/x-icon" href="/static/logo zakat png ~ferr.png">
 </head>
 <body>
     <nav>
-        <div class="logo">
-            <h1><a href="{{url_for ('home')}}">Kelompok 7</a></h1>
+        <div id="logo">
+            <a href="{{url_for('home')}}">
+                <img src="/static/logo zakat png ~ferr.png" alt="Logo_Project" width="40px">
+                <span>Kalkulator Zakat</span>
+            </a>
         </div>
-        <div class="option">
+        
+        <div id="option">
             <ul class="nav_option">
                 <li class="home"><a href="{{url_for ('home')}}">Home</a></li>
                 <li class="about"><a href="{{url_for ('about')}}">About Project</a></li>
@@ -20,22 +24,24 @@
         </div>
     </nav>
 
-    <div class="content">
-        <div class="sidebar">
-            <p class="sidebar_title">Pilih Jenis Zakat</p>
-            <ul class="list_zakat">
-                <li><a href="{{url_for ('zakat_emas')}}">Emas</a></li>
-                <li><a href="{{url_for ('zakat_perdagangan')}}">Perdagangan</a></li>
-                <li><a href="{{url_for ('zakat_pertanian')}}">Pertanian</a></li>
-                <li><a href="{{url_for ('zakat_penghasilan')}}">Penghasilan</a></li>
-            </ul>
-        </div>
-
-        <div class="menu_kal">
-            {% block content %}
+    <main>
+        <div id="content">
+            <div id="sidebar">
+                <p class="sidebar_title">Pilih Jenis Zakat</p>
+                <ul class="list_zakat">
+                    <li><a href="{{url_for ('zakat_emas')}}">Emas</a></li>
+                    <li><a href="{{url_for ('zakat_perdagangan')}}">Perdagangan</a></li>
+                    <li><a href="{{url_for ('zakat_pertanian')}}">Pertanian</a></li>
+                    <li><a href="{{url_for ('zakat_penghasilan')}}">Penghasilan</a></li>
+                </ul>
+            </div>
     
-            {% endblock %}
+            <div class="menu_kal">
+                {% block content %}
+        
+                {% endblock %}
+            </div>
         </div>
-    </div>
+    </main>
 </body>
 </html>

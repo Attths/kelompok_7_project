@@ -5,7 +5,6 @@
 <h1 class="title_zakat">Zakat Pertanian</h1>
 <div class="form_input">
     <form method="post" action="/zakat-pertanian">
-        <!-- <label for="harga_per_kg">Harga Jual per Kg Saat Ini</label> -->
         <p>Harga Jual per Kg Saat Ini: Rp{{ harga_per_kg if harga_per_kg is not none else 0 }}</p>
         <p>Nisab (635 Kg)</p>
 
@@ -45,7 +44,7 @@
 {% endif %}
 
 <div class="desc_zakat">
-  <p name="desc_zakat">
+  <p>
     <b>Nisab dan Cara Menghitung Zakat Pertanian</b> <br>
     Zakat pertanian wajib dikenakan jika hasil panen mencapai nisab 635 kg gabah. Besarnya kadar zakat adalah:<br>
     - 5% untuk lahan dengan irigasi<br>

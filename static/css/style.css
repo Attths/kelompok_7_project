@@ -5,21 +5,35 @@
 }
 
 nav {
+    z-index: 10;
     height: 80px;
     display: flex;
+    position: relative;
     align-items: center;
-    background-image: linear-gradient(45deg, #63b665, #7cc476, #93d387, #58a83b);
     justify-content: space-between;
     box-shadow: 0px 14px 18px -16px rgba(0,0,0,0.45);
+    background-image: linear-gradient(45deg, #63b665, #7cc476, #93d387, #58a83b);
 }
 
-.logo a{
-    font-size: 30px;
+#logo {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+#logo a{
+    font-size: 20px;
+    font-weight: 600;
     margin-left: 30px;
+    align-items: center;
     text-decoration: none;
     color: rgb(255, 255, 255);
 }
 
+#logo img {
+    display: inline-block;
+    vertical-align: middle;
+}
 
 .nav_option{
     display: flex;
@@ -35,9 +49,9 @@ nav {
 }
 
 .nav_option a{
+    color: white;
     font-size: 18px;
     font-weight: 550;
-    color: white;
     text-decoration: none;
 }
 
@@ -48,18 +62,18 @@ nav {
     background-color: white;
     color: rgb(55, 191, 105);
     padding: 5px 20px 5px 20px;
+    box-shadow: 5px 10px 15px -10px rgba(0,0,0,0.45);
 }
 
-.content {
+#content {
     display: flex;
 }
 
-.sidebar{
-    box-shadow: 0px 3px 15px -10px rgba(0,0,0,0.45);
-    border-right: 1px solid rgb(146, 146, 146);
-    min-height: 100vh;
+#sidebar{
     flex: 1;
-    background-size: auto;
+    z-index: 5;
+    border-right: 1px solid rgb(146, 146, 146);
+    box-shadow: 0px 3px 15px -10px rgba(0,0,0,0.45);
 }
 
 .sidebar_title {
@@ -90,8 +104,14 @@ nav {
 
 .menu_kal {
     flex: 5;
-    padding: 0 0 40px 0;
+    padding: 0;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('/static/web-bg.png');
 }
+
 
 .title_zakat {
     font-size: 45px;
@@ -108,67 +128,55 @@ nav {
 input[type=number] {
     border: none;
     border-radius: 10px;
-    border: 2.5px solid rgb(219, 219, 219);
     background-color: #ffffff;
     width: 45%;
     padding: 12px 20px;
     margin: 10px 0;
     box-sizing: border-box;
     box-shadow: 0px 3px 15px -10px rgba(0,0,0,0.45);
+    border: 2.5px solid rgb(219, 219, 219);
 }
 
 button {
     width: 13%;
-    cursor: pointer;
-    background-color: #ffffff;
-    border: 3px solid #87C374;
-    border-radius: 50px;
     font-size: 15px;
-    font-weight: 00;
+    cursor: pointer;
     color: #87C374;
-    padding: 10px 15px;
+    font-weight: 700;
+    border-radius: 50px;
     margin: 15px 0 15px 0;
+    padding: 10px 0 10px 0;
+    border: 3px solid #87C374;
+    background-color: #ffffff;
     box-shadow: 0px 10px 15px -10px rgba(0,0,0,0.45);
     
 }
   
 button:hover{
     color: white;
-    background-color: #87C374;
-    background-size: 400%;
     transition: 0.5s;
+    background-size: 400%;
+    background-color: #87C374;
     box-shadow: 0px 10px 15px -10px rgba(0,0,0,0.45);
-    /* animation: animate 10s linear infinite; */
 }
 
-/* @keyframes animate {
-    100% {
-        background-position: 400%;
-    }
-
-    100% {
-        background-position: 400%;
-    }
-    
-} */
-
 .hasil_zakat {
+    width: 50%;
     color: white;
+    padding: 30px;
     border-radius: 20px;
     margin: 20px 0 0 50px;
-    padding: 30px;
     background-color: #489D4A;
-    width: 50%;
     box-shadow: 5px 10px 15px -10px rgba(0,0,0,0.45);
 }
 
 .desc_zakat {
-    border: 2px solid rgb(212, 212, 212);
+    width: 70%;
     border-radius: 20px;
+    margin: 20px 0 50px 50px;
+    border: 2px solid rgb(212, 212, 212);
     background-color: rgb(252, 252, 252);
     box-shadow: 5px 10px 15px -10px rgba(0,0,0,0.45);
-    width: 70%;
-    margin: 20px 0 0 50px;
 }
 
 .desc_zakat p {
@@ -191,9 +199,4 @@ button:hover{
 .desc_home {
     width: 75%;
     margin: 0 0 0 50px;
-}
-
-p span {
-    font-weight: 800;
- color: #4CAF50;
 }

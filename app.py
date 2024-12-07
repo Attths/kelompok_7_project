@@ -73,6 +73,7 @@ def zakat_perdagangan():
     
     return render_template('zakat-perdagangan.html', nilai_zakat=None, harga_emas_per_gram=f"{harga_emas_per_gram:,.2f}".replace(",", "."))
 
+# zakat pertanian
 @app.route('/zakat-pertanian', methods=['GET', 'POST'])
 def zakat_pertanian():
     if request.method == 'POST':
@@ -112,7 +113,7 @@ def zakat_pertanian():
                        nisab=None, 
                        harga_per_kg=0)
 
-
+# zakat penghasilan
 @app.route('/zakat-penghasilan', methods=['GET', 'POST']) 
 def zakat_penghasilan(): 
     harga_emas_per_gram = 1439700
