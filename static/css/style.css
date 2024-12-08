@@ -183,7 +183,15 @@ button:hover{
     padding: 20px 20px 20px 20px;
 }
 
-#sistem_pengairan {
+
+
+.zakat_kambing ul li{
+    border: 2px solid black;
+    list-style-type: none;
+    padding: 0 20px 20px 50px;
+}
+
+#jenis_jenis {
     width: 13%;
     border-radius: 10px;
     padding : 10px 30px 10px 30px;

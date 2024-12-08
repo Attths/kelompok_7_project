@@ -13,20 +13,20 @@
     </form>
 </div>
 
-{% if nilai_zakat is not none %}
+{% if jumlah_zakat is not none %}
 <div class="hasil_zakat">
     <h2>Hasil Perhitungan</h2>
     {% if wajib_zakat %}
         <p class="zakat_yes"><strong>Anda wajib membayar zakat!</strong></p>
         <br>
-        <p>Nilai Zakat yang harus dibayar: <strong>Rp{{ nilai_zakat }}</strong></p>
+        <p>Nilai Zakat yang harus dibayar: <strong>Rp{{ jumlah_zakat }}</strong></p>
     {% else %}
         <p class="zakat_no"><strong>Anda tidak wajib membayar zakat.</strong></p>
     {% endif %}
 </div>
 {% endif %}
 
-<div class="desc_zakat">
+<div class="title_ desc_zakat">
     <p>
         <b>Nisab dan Cara Menghitung Zakat Emas</b>
         <br>

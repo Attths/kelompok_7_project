@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 class="title_zakat">Zakat Peternakan</h1>
+<div class="form_input">
+    <form method="post" action="/zakat-peternakan">
+        <!-- <p>Harga Jual per Kg Saat Ini: Rp{{ harga_per_kg if harga_per_kg is not none else 0 }}</p>
+        <p>Nisab (635 Kg)</p> -->
+
+        <br>
+
+        <label for="jumlah_ternak">Jumlah Hewan Ternak</label>
+        <input type="number" id="jumlah_ternak" name="jumlah_ternak" min="0" required placeholder="Input jumlah ternak Anda...">
+
+        <label for="jenis_ternak">Jenis Hewan Ternak: </label>
+            <select name="jenis_ternak" id="jenis_jenis">
+                <option value="kambing">Kambing</option>
+                <option value="sapi">Sapi</option>
+            </select>
+
+        <br>
+
+        <button type="submit">Hitung Zakat</button>
+    </form>
+</div>
+
+{% if jumlah_zakat is not none %}
+<div class="hasil_zakat">
+    <h2>Hasil Perhitungan</h2>
+    
+    {% if wajib_zakat %}
+    <br>
+        <p class="zakat_yes"><strong>Anda wajib membayar zakat!</strong></p>
+        <p>Nilai Zakat yang harus dibayar: <strong> {{ jumlah_zakat }} ekor {{jenis_ternak}} </strong> <br>
+            Rincian: <strong>{{ deskripsi }} </strong>
+        </p>
+    {% else %}
+        <p class="zakat_no"><strong>Anda tidak wajib membayar zakat.</strong></p>
+    {% endif %}
+</div>
+{% endif %}
+
+<div class="desc_zakat">
+  <p>
+    <b>Nisab dan Cara Menghitung Zakat Peternakan</b>
+    <br><br>
+    Hewan Ternak Kambing: <br>
+    40 - 120 ekor = 1 ekor kambing <br>
+    121 - 200 ekor = 2 ekor kambing <br>
+    201 - 300 ekor = 3 ekor kambing <br>
+    
+    <br>
+
+    Hewan Ternak Sapi: <br>
+    30 - 39 ekor = 1 ekor anak sapi betina atau jantan berusia 1 tahun <br>
+    40 -59 ekor = 1 ekor anak sapi betina berusia 1 tahun <br>
+    60 - 69 ekor = 3 ekor anak sapi betina atau jantan berusia 1 tahun <br>
+    70 - 79 ekor = 2 ekor anak sapi betina berusia 2 tahun dan 1 ekor anak sapi jantan berusia 1 tahun
+    </div>
+  </p>
+</div>
+
+
+{% endblock %}

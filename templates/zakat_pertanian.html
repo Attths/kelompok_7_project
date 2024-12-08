@@ -14,10 +14,10 @@
         <input type="number" id="harga_per_kg" name="harga_per_kg" min="0" required placeholder="Input harga jual per kg saat ini...">
         
         <label for="hasil_panen_kg">Hasil Panen (Kg)</label>
-        <input type="number" id="hasil_panen_kg" name="hasil_panen_kg" min="0" required placeholder="Input nilai hasil panen Anda dalam Kg...">
+        <input type="number" id="hasil_panen_kg" name="hasil_panen_kg" min="0" required placeholder="Input hasil panen Anda dalam Kg...">
 
         <label for="sistem_pengairan">Sistem Perairan Lahan: </label>
-            <select name="sistem_pengairan" id="sistem_pengairan">
+            <select name="sistem_pengairan" id="jenis_jenis">
                 <option value="irigasi">Irigasi</option>
                 <option value="alami">Alami</option>
             </select>
@@ -28,15 +28,15 @@
     </form>
 </div>
 
-{% if nilai_zakat is not none %}
+{% if jumlah_zakat is not none %}
 <div class="hasil_zakat">
     <h2>Hasil Perhitungan</h2>
     
     {% if wajib_zakat %}
     <br>
         <p class="zakat_yes"><strong>Anda wajib membayar zakat!</strong></p>
-        <p>Nilai Zakat yang harus dibayar (Rp): <strong>Rp {{ nilai_zakat }}</strong></p>
-        <p>Nilai Zakat yang harus dibayar (Kg): <strong>{{ nilai_zakat_kg }}Kg</strong></p>
+        <p>Nilai Zakat yang harus dibayar (Rp): <strong>Rp {{ jumlah_zakat }}</strong></p>
+        <p>Nilai Zakat yang harus dibayar (Kg): <strong>{{ jumlah_zakat_kg }}Kg</strong></p>
     {% else %}
         <p class="zakat_no"><strong>Anda tidak wajib membayar zakat.</strong></p>
     {% endif %}
