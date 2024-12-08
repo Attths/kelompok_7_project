@@ -146,6 +146,7 @@ def zakat_penghasilan():
     
     return render_template('zakat_penghasilan.html', jumlah_zakat=None, harga_emas_per_gram=f"{harga_emas_per_gram:,.2f}".replace(",", "."))
 
+# zakat peternakan
 @app.route('/zakat-peternakan', methods=['GET', 'POST'])
 def zakat_peternakan():
     if request.method == 'POST':
