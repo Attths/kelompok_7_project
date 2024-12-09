@@ -47,6 +47,8 @@ def zakat_emas():
 @app.route('/zakat-perdagangan', methods=['GET', 'POST'])
 def zakat_perdagangan():
     harga_emas_per_gram = 1439700
+    nisab = 85 * harga_emas_per_gram
+    nisab_formatted = f"{nisab:,.2f}".replace(",", ".")
 
     if request.method == 'POST':
             modal = float(request.form['jumlah_modal'])
@@ -75,7 +77,7 @@ def zakat_perdagangan():
                                    nisab = nisab_formatted,
                                    harga_emas_per_gram=f"{int(harga_emas_per_gram):,}".replace(",", "."))
     
-    return render_template('zakat-perdagangan.html', jumlah_zakat=None, harga_emas_per_gram=f"{harga_emas_per_gram:,.2f}".replace(",", "."))
+    return render_template('zakat-perdagangan.html', jumlah_zakat=None, nisab=nisab_formatted, harga_emas_per_gram=f"{harga_emas_per_gram:,.2f}".replace(",", "."))
 
 # zakat pertanian
 @app.route('/zakat-pertanian', methods=['GET', 'POST'])
@@ -121,6 +123,9 @@ def zakat_pertanian():
 @app.route('/zakat-penghasilan', methods=['GET', 'POST']) 
 def zakat_penghasilan(): 
     harga_emas_per_gram = 1439700
+    nisab = 85 * harga_emas_per_gram
+    nisab_formatted = f"{nisab:,.2f}".replace(",", ".")
+    
     if request.method == 'POST':
         jumlah_penghasilan = float(request.form['hasil_penghasilan'])
         
@@ -144,7 +149,7 @@ def zakat_penghasilan():
                                nisab=nisab_formatted,
                                harga_emas_per_gram=f"{harga_emas_per_gram:,.2f}".replace(",", "."))
     
-    return render_template('zakat_penghasilan.html', jumlah_zakat=None, harga_emas_per_gram=f"{harga_emas_per_gram:,.2f}".replace(",", "."))
+    return render_template('zakat_penghasilan.html', nisab=nisab_formatted, jumlah_zakat=None, harga_emas_per_gram=f"{harga_emas_per_gram:,.2f}".replace(",", "."))
 
 @app.route('/zakat-peternakan', methods=['GET', 'POST'])
 def zakat_peternakan():
