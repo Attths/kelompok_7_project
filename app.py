@@ -123,7 +123,7 @@ def zakat_pertanian():
 @app.route('/zakat-penghasilan', methods=['GET', 'POST']) 
 def zakat_penghasilan(): 
     harga_emas_per_gram = 1439700
-    nisab = 85 * harga_emas_per_gram
+    nisab = 85 * harga_emas_per_gram / 12
     nisab_formatted = f"{nisab:,.2f}".replace(",", ".")
     
     if request.method == 'POST':
