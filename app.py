@@ -42,7 +42,6 @@ def zakat_emas():
                            nisab=nisab_formatted,
                            harga_emas_per_gram=f"{harga_emas_per_gram:,.2f}".replace(",", "."))
 
-
 # zakat perdagangan
 @app.route('/zakat-perdagangan', methods=['GET', 'POST'])
 def zakat_perdagangan():
@@ -85,7 +84,7 @@ def zakat_pertanian():
         harga_per_kg = float(request.form.get('harga_per_kg', 0))
         sistem_pengairan = request.form.get('sistem_pengairan')
 
-        nisab = 635
+        nisab = 653
         hasil_panen_rp = hasil_panen_kg * harga_per_kg
 
         if sistem_pengairan == 'irigasi':
