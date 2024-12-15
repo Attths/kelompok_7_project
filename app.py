@@ -76,7 +76,10 @@ def zakat_perdagangan():
                                    nisab = nisab_formatted,
                                    harga_emas_per_gram=f"{int(harga_emas_per_gram):,}".replace(",", "."))
     
-    return render_template('zakat-perdagangan.html', jumlah_zakat=None, nisab=nisab_formatted, harga_emas_per_gram=f"{harga_emas_per_gram:,.2f}".replace(",", "."))
+    return render_template('zakat-perdagangan.html',
+                           jumlah_zakat=None,
+                           nisab=nisab_formatted,
+                           harga_emas_per_gram=f"{harga_emas_per_gram:,.2f}".replace(",", "."))
 
 # zakat pertanian
 @app.route('/zakat-pertanian', methods=['GET', 'POST'])
